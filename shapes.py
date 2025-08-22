@@ -12,7 +12,7 @@ def decorate_time(func):
 
 
 
-@decorate_time
+@decorate_time 
 def quadrilateral(): 
     #This code creates a grid of "#" 
 
@@ -116,4 +116,5 @@ if __name__=="__main__":
     quadrilateral()
     diamond()
     right_triangle()
+
     tri()
