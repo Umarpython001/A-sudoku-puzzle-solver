@@ -1,0 +1,18 @@
+LOOP STRUCTURE
+
+To implement backtracking, the function calls itself.
+
+Find an empty cell.
+Base Case: If there are no empty cells left, the puzzle is solved! Return True.
+
+    Recursive Step:
+    a. Iterate through all possible numbers, from 1 to 9.
+    b. For each number, check if it's valid for the empty cell (row, column, and box).
+    c. If it's valid, place the number in the grid.
+    d. Now, recursively call your function again. This is where the magic happens. You're saying, "If I put this number here, can the rest of the puzzle be solved?"
+    e. If that recursive call returns True (meaning it solved the rest of the puzzle), then your job is done. Return True.
+    f. If the recursive call returns False (meaning the path led to a dead end), this is the crucial step: backtrack. You must undo the move by setting the cell back to 0.
+
+    Failure: If you've tried all numbers from 1-9 for the current cell and none of them led to a solution, then this path is impossible. Return False to the previous recursive call, telling it to backtrack and try a different number.
+
+
